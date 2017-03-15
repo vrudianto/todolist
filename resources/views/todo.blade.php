@@ -10,11 +10,11 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<h1>ToDo List</h1>	
-				<ul>
+				<ol>
 					@foreach($todo as $td)
 					<li style="margin-bottom:5px;">{{ $td->item }} <a href="{{ url('todo/'.$td->id_todo) }}" class="btn btn-danger btn-xs">x</a></li>
 					@endforeach
-				</ul>	
+				</ol>	
 				<form action="todo" method="POST">
 					{{ csrf_field() }}
 					<div class="row">
